@@ -16,14 +16,14 @@ RESPONSES = { 'goodbye' => 'bye',
               'Have you seen movie (.*)' => 'Oh, %{c1}. I watched it today. Could be better',
               'Which OS better (.*) or (.*)' => 'Of course %{c1}! But %{c2} have some advantages too :-)'}
 
-
 puts "Hello, what's your name?"
 name = gets.chomp
 puts "Hello #{name}"
-while(input = gets.chomp) do
-	if input == 'quit' 
-		exit
+while(p name + ' => ' + input = gets.chomp) do
+	if input == 'quit' || input == 'goodbye'
+    puts 'bot => bye'
+    exit
 	else 
-		puts get_response(input)
+		puts "'bot =>  #{get_response(input)}'"
 	end
 end
