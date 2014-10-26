@@ -21,5 +21,9 @@ puts "Hello, what's your name?"
 name = gets.chomp
 puts "Hello #{name}"
 while(input = gets.chomp) do
-  puts get_response(input)
+	if input == 'quit' 
+		exit
+	else 
+		puts get_response(input)
+	end
 end
